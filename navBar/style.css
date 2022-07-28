@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.menuSelect {
+  display: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(17, 17, 37);
+  padding: 30px;
+}
+
+li {
+  list-style: none;
+  /* 불릿 제거 */
+}
+/* logo와 이름 */
+
+.logoName {
+  color: white;
+  font-size: 20px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.logoColor {
+  color: orange;
+  font-size: 20px;
+}
+/* 메뉴선택 */
+.info {
+  display: flex;
+}
+.menuText {
+  color: white;
+}
+.info li {
+  /* margin-left: 20px; */
+}
+/* SNS */
+.snsInfo {
+  display: flex;
+}
+.snsInfo li {
+}
+.facebook,
+.twitter {
+  color: white;
+}
+
+@media screen and (max-width: 750px) {
+  nav {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+  .logoAndImg {
+    padding: 20px;
+  }
+  /* logo와 이름 */
+  /* menu 선택*/
+  .info {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .menuText {
+    margin: 0;
+  }
+  /* sns */
+  .snsInfo {
+  }
+
+  .info li {
+    width: 100%;
+    margin: 10px;
+  }
+  .info li:hover {
+    background-color: rgb(228, 111, 16);
+  }
+  /* menu 버튼 */
+}
