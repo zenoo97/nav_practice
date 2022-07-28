@@ -1,9 +1,14 @@
-const toggleBtn = document.querySelector(".toggleBtn");
+const toggleBtn = document.querySelector(".navbar_toggleBtn");
 
 function onClickBtn() {
-  if (document.querySelector(".snsInfo").style.display === "none") {
-    document.querySelector(".snsInfo").style.display === "flex";
+  if (
+    document.querySelector(".navbar_menu").style.display === "none" &&
+    document.querySelector(".navbar_icons").style.display === "none"
+  ) {
+    document.querySelector(".navbar_menu").style.display = "flex";
+    document.querySelector(".navbar_icons").style.display = "flex";
   } else {
-    document.querySelector(".snsInfo").style.display === "none";
+    document.querySelector(".navbar_menu").style.display = "none";
+    document.querySelector(".navbar_icons").style.display = "none";
   }
 }

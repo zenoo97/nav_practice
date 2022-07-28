@@ -1,98 +1,82 @@
-* {
+body {
   margin: 0;
-  padding: 0;
 }
-.toggleBtn {
-  display: none;
-  color: orange;
-  position: absolute;
-  right: 20px;
-  top: 30px;
+a {
+  text-decoration: none;
+  /* 링크 밑줄 없애기 */
+  color: white;
 }
-nav {
-  width: 100%;
+.navbar {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(17, 17, 37);
-  /* padding: 30px; */
+  align-items: center;
+  background-color: #263343;
+  padding: 8px 12px;
 }
 
-li {
+.navbar_logo {
+  font-size: 24px;
+  color: white;
+}
+.navbar_logo i {
+  color: #d49466;
+}
+.navbar_menu {
+  display: flex;
   list-style: none;
-  /* 불릿 제거 */
+  padding-left: 0;
 }
-.logoAndImg {
-  padding: 30px;
+.navbar_menu li {
+  padding: 8px 12px;
+  /* padding을 쓰는 이유는 백그라운드를 넓게 사용하기 위해서 */
+  /* margin을 넣으면 클릭할 수 있는 영역이 좁아진다. */
 }
-/* logo와 이름 */
-
-.logoName {
-  color: white;
-  font-size: 20px;
-  margin-left: 5px;
-  font-weight: bold;
+.navbar_menu li:hover {
+  background-color: #d49466;
+  border-radius: 4px;
 }
-.logoColor {
-  color: orange;
-  font-size: 20px;
-}
-/* 메뉴선택 */
-.info {
+.navbar_icons {
+  list-style: none;
   display: flex;
-  align-items: center;
-}
-.menuText {
   color: white;
-  margin: 0 10px;
+  padding-left: 0;
+}
+.navbar_icons li {
+  padding: 8px 12px;
+}
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
 }
 
-/* SNS */
-.snsInfo {
-  display: flex;
-  align-items: center;
-}
-.snsInfo li {
-  margin: 0 5px;
-}
-.facebook,
-.twitter {
-  color: white;
-}
-
-@media screen and (max-width: 750px) {
-  /* 로고와 이미지 */
-  nav {
+@media screen and (max-width: 768px) {
+  .navbar {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
   }
-
-  .logoAndImg {
-    flex-direction: row;
-  }
-
-  /* 메뉴 설명 */
-  .info {
+  .navbar_menu {
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .info li {
-    width: 100%;
-    padding: 10px 0;
-  }
-  .info li:hover {
-    background: orange;
-  }
-  /* sns */
-  .snsInfo {
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .menuText {
     align-items: center;
+    /* 여기만 center해버리면 해당 클래스가 작기 때문에 width를 100%로 늘려준다. */
+    width: 100%;
+    flex-direction: column;
   }
-  .toggleBtn {
+  .navbar_menu li {
+    width: 100%;
+    /* 이거만 해주면 왼쪽으로 감 */
+    text-align: center;
+    /* text를 중간으로 */
+  }
+  .navbar_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar_toggleBtn {
     display: block;
   }
 }
