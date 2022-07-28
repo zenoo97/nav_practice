@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  /* 링크 밑줄 없애기 */
+  color: white;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263343;
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  color: white;
+}
+.navbar_logo i {
+  color: #d49466;
+}
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.navbar_menu li {
+  padding: 8px 12px;
+  /* padding을 쓰는 이유는 백그라운드를 넓게 사용하기 위해서 */
+  /* margin을 넣으면 클릭할 수 있는 영역이 좁아진다. */
+}
+.navbar_menu li:hover {
+  background-color: #d49466;
+  border-radius: 4px;
+}
+.navbar_icons {
+  list-style: none;
+  display: flex;
+  color: white;
+  padding-left: 0;
+}
+.navbar_icons li {
+  padding: 8px 12px;
+}
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar_menu {
+    display: none;
+    align-items: center;
+    /* 여기만 center해버리면 해당 클래스가 작기 때문에 width를 100%로 늘려준다. */
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar_menu li {
+    width: 100%;
+    /* 이거만 해주면 왼쪽으로 감 */
+    text-align: center;
+    /* text를 중간으로 */
+  }
+  .navbar_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar_toggleBtn {
+    display: block;
+  }
+}
